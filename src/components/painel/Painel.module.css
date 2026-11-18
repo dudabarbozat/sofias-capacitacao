@@ -1,0 +1,25 @@
+/* Partes do painel que não existiam no mockup: filtros, mapa por UF e ações de tabela. */
+.filtros { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: -6px 0 22px; padding: 10px 14px; background: rgba(255, 255, 255, .75); border-radius: 6px; font-family: var(--f-painel); font-size: .82rem; }
+.filtros > :global(.ic) { width: 18px; height: 18px; color: var(--roxo); }
+.filtro { display: flex; align-items: center; gap: 8px; }
+.filtro span { font-weight: 500; }
+.filtro select { min-height: 36px; padding: 4px 8px; border: 1px solid #d6cbe6; border-radius: 4px; background: #fff; font: inherit; }
+.trilha { color: #5d5470; }
+.blocoMapa { min-width: 0; }
+.mapaLinha { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 14px; }
+.mapaCaixa { position: relative; width: 100%; max-width: 360px; }
+.mapa { width: 100%; height: auto; display: block; }
+.uf { stroke: #f1ecf7; stroke-width: .9; transition: opacity .15s; cursor: pointer; outline: none; }
+.uf:focus-visible, .ufFoco { stroke: #ffb020; stroke-width: 2.5; }
+.ufApagada { opacity: .25; cursor: default; }
+.mapaInfo { display: flex; flex-direction: column; min-height: 58px; margin-top: 6px; font-size: .8rem; }
+.mapaInfo strong { font-weight: 600; font-size: .9rem; }
+.mapaDica { color: #5d5470; }
+.legenda { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 10px; padding: 0; margin: 4px 0 0; font-size: .72rem; color: #4f3f6b; }
+.legenda li { display: inline-flex; align-items: center; gap: 4px; }
+.legenda span { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.fonte { margin: 6px 0 0; font-size: .7rem; color: #5d5470; }
+.mapaEsqueleto { display: block; width: 100%; max-width: 320px; aspect-ratio: 1 / 1; }
+.acoesTabela { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.check { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--roxo); }

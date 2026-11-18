@@ -1,0 +1,48 @@
+/* Moldura do app: fundo lilás com manchas desfocadas, como nos mockups do pitch. */
+.app {
+  position: relative;
+  max-width: var(--largura-app);
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(160px 140px at 100% 6%, rgba(196, 160, 245, .55), transparent 70%),
+    radial-gradient(200px 180px at 0% 34%, rgba(205, 175, 248, .55), transparent 70%),
+    radial-gradient(180px 160px at 100% 70%, rgba(214, 190, 250, .45), transparent 70%),
+    radial-gradient(160px 140px at 70% 100%, rgba(255, 214, 140, .35), transparent 70%),
+    var(--fundo-app);
+}
+@media (min-width: 520px) {
+  .app { margin-top: 24px; min-height: calc(100vh - 72px); border-radius: 28px 28px 0 0; box-shadow: 0 30px 70px -40px rgba(49, 15, 85, .55); overflow: clip; }
+}
+
+.topo { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 4px; }
+.logo { display: inline-flex; padding: 2px; border-radius: 6px; }
+.logo img { width: 30px; height: auto; }
+.acoes { display: flex; align-items: center; gap: 8px; }
+.status { display: inline-flex; align-items: center; gap: 4px; font: 500 .74rem/1 var(--f-texto); color: var(--roxo); background: var(--lilas-pill); padding: 5px 8px; border-radius: 999px; }
+.status :global(.ic) { width: 14px; height: 14px; }
+.statusOff { color: var(--erro); background: var(--erro-claro); }
+
+.menu { position: relative; }
+.menu summary { list-style: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--roxo-icone); cursor: pointer; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary :global(.ic) { width: 26px; height: 26px; }
+.menuLista { position: absolute; right: 0; top: 46px; z-index: 30; min-width: 220px; padding: 8px; background: #fff; border-radius: 10px; box-shadow: var(--sombra); display: grid; }
+.menuLista a, .menuLista button { display: flex; align-items: center; gap: 10px; text-align: left; padding: 10px 12px; border: 0; background: none; border-radius: 6px; color: var(--tinta); text-decoration: none; font-size: .95rem; cursor: pointer; }
+.menuLista :global(.ic) { width: 18px; height: 18px; color: var(--roxo); }
+.menuLista a:hover, .menuLista button:hover { background: var(--lilas-pill); }
+.menuNome { font: 600 .85rem var(--f-titulo); color: var(--tinta-2); padding: 6px 12px 8px; margin: 0; border-bottom: 1px solid var(--linha); }
+
+.faixaOffline { display: flex; align-items: center; gap: 8px; margin: 8px 20px 0; padding: 10px 12px; border-radius: 8px; background: var(--erro-claro); color: var(--erro); font-size: .85rem; }
+.faixaOffline :global(.ic) { width: 18px; height: 18px; }
+
+.main { flex: 1; padding: 8px 20px 28px; min-width: 0; }
+.main:focus { outline: none; }
+
+.abas { position: sticky; bottom: 0; z-index: 10; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 6px; align-items: center; background: var(--lilas-claro); padding: 12px 14px calc(14px + env(safe-area-inset-bottom)); border-radius: 18px 18px 0 0; }
+.abas a { display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border-radius: 14px; color: var(--roxo-nav); text-decoration: none; font: 700 .95rem var(--f-titulo); }
+.abas a :global(.ic) { width: 26px; height: 26px; }
+.abas a.abaAtiva { background: var(--lilas-pill); color: #1b0069; }
