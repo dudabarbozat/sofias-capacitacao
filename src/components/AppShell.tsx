@@ -38,6 +38,23 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <>
       <a className="pular" href="#conteudo">Pular para o conteúdo</a>
+      <aside className={s.lateral} aria-label="Sobre o protótipo">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={caminho("/img/logo-sofias.png")} alt="Sofias" width={942} height={776} className={s.lateralLogo} />
+        <p>PWA de capacitação online e offline para jovens mulheres, com teste vocacional, trilha gamificada, certificado e painel para empresas parceiras.</p>
+        <p><b>Para quem é:</b> jovens mulheres de 15 a 25 anos fora da escola e do mercado de trabalho, e empresas que buscam candidatas.</p>
+        <ul className={s.lateralLista}>
+          <li><Icone nome="teste" /><span><b>Teste vocacional</b> com a área recomendada.</span></li>
+          <li><Icone nome="trilha" /><span><b>Trilha gamificada</b> com níveis e XP.</span></li>
+          <li><Icone nome="offline" /><span><b>Uso offline:</b> app instalável e módulos baixados.</span></li>
+          <li><Icone nome="certificado" /><span><b>Certificado</b> com código de verificação.</span></li>
+        </ul>
+        <div className={s.lateralLinks}>
+          <a className="botao botao--primario" href="https://github.com/dudabarbozat/sofias-capacitacao" target="_blank" rel="noreferrer"><Icone nome="github" />Ver o código no GitHub</a>
+          <Link className="botao botao--fantasma" href="/empresa/"><Icone nome="empresa" />Painel da empresa</Link>
+        </div>
+        <p className={s.lateralNota}>Projeto de pitch em equipe, reconstruído em 2026 como protótipo navegável.</p>
+      </aside>
       <div className={s.app}>
         <header className={s.topo}>
           <Link className={s.logo} href="/" aria-label="Sofias, início">
